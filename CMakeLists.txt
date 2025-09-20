@@ -13,7 +13,8 @@ add_library(ImGui imconfig.h
 	)
 
 if(CMAKE_BUILD_TYPE STREQUAL "Release")
-    target_compile_definitions(ImGui
-            PUBLIC NDEBUG=1
-        )
+	target_compile_definitions(ImGui
+			PUBLIC NDEBUG=1
+			PUBLIC IMGUI_DISABLE_OBSOLETE_FUNCTIONS=1
+		)
 endif()
