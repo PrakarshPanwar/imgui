@@ -127,6 +127,16 @@
 #define GLFW_EXPOSE_NATIVE_COCOA
 #endif
 #include <GLFW/glfw3native.h>
+#elif !defined(__EMSCRIPTEN__)
+/*#ifndef GLFW_EXPOSE_NATIVE_X11      // for glfwGetX11Window() on Freedesktop (Linux, BSD, etc.)
+#define GLFW_EXPOSE_NATIVE_X11
+#include <X11/Xatom.h>
+#endif*/
+#ifndef GLFW_EXPOSE_NATIVE_WAYLAND
+#define GLFW_EXPOSE_NATIVE_WAYLAND
+#endif
+#include <GLFW/glfw3native.h>
+#undef Status                   // X11 headers are leaking this.
 #endif
 
 #ifndef _WIN32
