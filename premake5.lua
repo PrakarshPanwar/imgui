@@ -24,6 +24,8 @@ project "ImGui"
         "../VulkanSDK/Include"
     }
 
+    defines { "IMGUI_DISABLE_OBSOLETE_FUNCTIONS", "IMGUI_DEFINE_MATH_OPERATORS" }
+
     filter "system:windows"
     systemversion "latest"
 	cppdialect "C++20"
