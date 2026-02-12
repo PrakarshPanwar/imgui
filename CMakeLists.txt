@@ -5,6 +5,7 @@ add_library(ImGui imconfig.h
 		imgui_draw.cpp
 		imgui_tables.cpp
 		imgui_internal.h
+		imgui_threaded_rendering.h
 		imgui_widgets.cpp
 		imstb_rectpack.h
 		imstb_textedit.h
@@ -16,5 +17,6 @@ if(CMAKE_BUILD_TYPE STREQUAL "Release")
 	target_compile_definitions(ImGui
 			PUBLIC NDEBUG
 			PUBLIC IMGUI_DISABLE_OBSOLETE_FUNCTIONS
+			PUBLIC IMGUI_DISABLE_DEBUG_TOOLS
 		)
 endif()
