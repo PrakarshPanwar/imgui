@@ -12,6 +12,7 @@ project "ImGui"
 		"imgui_draw.cpp",
 		"imgui_tables.cpp",
 		"imgui_internal.h",
+        "imgui_threaded_rendering.h",
 		"imgui_widgets.cpp",
 		"imstb_rectpack.h",
 		"imstb_textedit.h",
@@ -24,7 +25,7 @@ project "ImGui"
         "../VulkanSDK/Include"
     }
 
-    defines { "IMGUI_DISABLE_OBSOLETE_FUNCTIONS", "IMGUI_DEFINE_MATH_OPERATORS" }
+    defines { "IMGUI_DISABLE_OBSOLETE_FUNCTIONS", "IMGUI_DISABLE_DEBUG_TOOLS", "IMGUI_DEFINE_MATH_OPERATORS" }
 
     filter "system:windows"
     systemversion "latest"
