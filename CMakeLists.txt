@@ -10,13 +10,15 @@ add_library(ImGui imconfig.h
 		imstb_rectpack.h
 		imstb_textedit.h
 		imstb_truetype.h
-		imgui_demo.cpp	
+		imgui_demo.cpp
+	)
+
+target_compile_definitions(ImGui
+		PUBLIC IMGUI_DISABLE_OBSOLETE_FUNCTIONS
 	)
 
 if(CMAKE_BUILD_TYPE STREQUAL "Release")
 	target_compile_definitions(ImGui
-			PUBLIC NDEBUG
-			PUBLIC IMGUI_DISABLE_OBSOLETE_FUNCTIONS
 			PUBLIC IMGUI_DISABLE_DEBUG_TOOLS
 		)
 endif()

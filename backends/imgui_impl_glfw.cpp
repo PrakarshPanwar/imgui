@@ -1725,4 +1725,3 @@ static LRESULT CALLBACK ImGui_ImplGlfw_WndProc(HWND hWnd, UINT msg, WPARAM wPara
 #endif
 
 #endif // #ifndef IMGUI_DISABLE
-
