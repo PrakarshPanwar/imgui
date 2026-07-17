@@ -15,6 +15,7 @@ add_library(ImGui imconfig.h
 
 target_compile_definitions(ImGui
 		PUBLIC IMGUI_DISABLE_OBSOLETE_FUNCTIONS
+        PUBLIC IMGUI_IMPL_VULKAN_USE_VOLK
 	)
 
 if(CMAKE_BUILD_TYPE STREQUAL "Release")
